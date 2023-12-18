@@ -22,8 +22,12 @@ The script will prompt you for several pieces of information:
 
 3. **"Image Version":**  Enter the image version corresponding to the MultiversX SDK used for building the deployed contract. Verify your version at MultiversX SDK Rust Contract Builder Tags.
 
-4. **"Smart Contract Address":**  Provide the address of the deployed smart contract.
+4. **"Network of the Smart Contract (D or M)":**  Specify 'D' for Devnet or 'M' for Mainnet.
 
-5. **"Network of the Smart Contract (D or M)":**  Specify 'D' for Devnet or 'M' for Mainnet.
+After this, the script will create the reproducible build for the specified image. A prompt will ask you to deploy the newly created wasm file (you will have to do this yourself).
 
-6. **"Wallet File Name (PEM or JSON)":**  Enter the name of the wallet file from which the smart contract was deployed.
+Two more pieces of information will be asked to you:
+
+1. **"Smart Contract Address":**  Provide the address of the deployed smart contract.
+
+2. **"Wallet File Name (PEM or JSON)":**  Enter the name of the wallet file from which the smart contract was deployed.

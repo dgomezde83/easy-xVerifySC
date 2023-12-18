@@ -57,21 +57,11 @@ def main(args=None):
     project_dir = args.project_dir if args.project_dir else get_input("Enter the project directory (relative to current dir): ")
     build_output_dir = args.build_output_dir if args.build_output_dir else get_input("Enter the build output directory (relative to current dir): ")
     image_version = args.image_version if args.image_version else get_input("Enter the image version (e.g., v5.3.0): ")
-    
-    smart_contract_address = args.smart_contract_address if args.smart_contract_address else get_input("Enter the smart contract address: ")
-    while not validate_smart_contract_address(smart_contract_address):
-        print("Invalid smart contract address. It should start with 'erd1' and be 62 characters long.")
-        smart_contract_address = args.smart_contract_address if args.smart_contract_address else get_input("Enter the smart contract address: ")
         
     network = args.network if args.network else get_input("Enter the network of the smart contract (D or M): ")
     while network not in ['D', 'M']:
         print("Invalid network. Please enter 'D' for Devnet or 'M' for Mainnet.")
         network = args.network if args.network else get_input("Enter the network of the smart contract (D or M): ")
-        
-    wallet = args.wallet if args.wallet else get_input("Enter the wallet file name (with .pem or .json extension): ")
-    while not wallet.endswith('.pem') and not wallet.endswith('.json'):
-        print("Invalid wallet file. The extension must be .pem or .json.")
-        wallet = args.wallet if args.wallet else get_input("Enter the wallet file name (with .pem or .json extension): ")
 
     verifier_url = "https://devnet-play-api.multiversx.com" if network == 'D' else "https://play-api.multiversx.com"
     image_name = f"multiversx/sdk-rust-contract-builder:{image_version}"
@@ -98,6 +88,23 @@ def main(args=None):
     if not script_file:
         print("Error: No '.source.json' file found in the build output directory.")
         return
+
+     # Ask the user to confirm deployment
+    while True:
+        deploy_confirm = input("Did you deploy the smart contract created in '" + (build_output_path) + "/your_project_name' to " + ("Mainnet" if network == 'M' else "Devnet") + "? (yes/no): ").strip().lower()
+        if deploy_confirm in ["yes", "y"]:
+            break
+        print("Deploy it and click yes")
+
+    smart_contract_address = args.smart_contract_address if args.smart_contract_address else get_input("Enter the smart contract address: ")
+    while not validate_smart_contract_address(smart_contract_address):
+        print("Invalid smart contract address. It should start with 'erd1' and be 62 characters long.")
+        smart_contract_address = args.smart_contract_address if args.smart_contract_address else get_input("Enter the smart contract address: ")
+        
+    wallet = args.wallet if args.wallet else get_input("Enter the wallet file name (with .pem or .json extension): ")
+    while not wallet.endswith('.pem') and not wallet.endswith('.json'):
+        print("Invalid wallet file. The extension must be .pem or .json.")
+        wallet = args.wallet if args.wallet else get_input("Enter the wallet file name (with .pem or .json extension): ")
 
     # Construct wallet command
     wallet_command = f"--pem {wallet}" if wallet.endswith('.pem') else f"--keyfile {wallet}"
