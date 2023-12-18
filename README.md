@@ -6,10 +6,13 @@
 ### Step 1: Install Docker
 1. **Install Docker** following the [Generic Installation Steps](https://docs.docker.com/desktop/install/linux-install/).
 
-### Step 2: Prepare Your Wallet File
+### Step 2: Pull image
+Pull the latest image version from [DockerHub(https://hub.docker.com/r/multiversx/sdk-rust-contract-builder).
+
+### Step 3: Prepare Your Wallet File
 2. Place your wallet file (`.pem` or `.json`) adjacent to the `verify.py` file for streamlined usage.
 
-### Step 3: Run the Verification Script
+### Step 4: Run the Verification Script
 3. Execute the script using the command:
    ```bash
    python verify.py
@@ -20,7 +23,7 @@ The script will prompt you for several pieces of information:
 
 2. **"Build Output Directory":**  Indicate the output directory for storing build information (note: this directory should not exist prior to running the script; it will be created automatically).
 
-3. **"Image Version":**  Enter the image version corresponding to the MultiversX SDK used for building the deployed contract. Verify your version at MultiversX SDK Rust Contract Builder Tags.
+3. **"Image Version":**  Enter the latest image version from [DockerHub(https://docs.docker.com/desktop/install/linux-install/).
 
 4. **"Network of the Smart Contract (D or M)":**  Specify 'D' for Devnet or 'M' for Mainnet.
 
