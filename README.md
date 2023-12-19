@@ -16,10 +16,10 @@ Ensuring the integrity of smart contracts on the blockchain is best achieved by 
 There are two ways to run the script: either in "simulate" mode or in normal mode. The "simulate" mode will not deploy the SC to the devnet/mainnet but will only simulate its deployment to verify that everything is functioning correctly before actual deployment.
 
 ```bash
-python verify.py simulate
+python easy-xVerifySC.py simulate
 ```
 ```bash
-python verify.py
+python easy-xVerifySC.py
 ```
 
 The script will prompt you for several pieces of information:
