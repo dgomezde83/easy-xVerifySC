@@ -9,11 +9,10 @@
 ### Step 2: Run the Verification Script
 There are two ways to run the script: either in "simulate" mode or in normal mode. The "simulate" mode will not deploy the SC to the devnet/mainnet but will only simulate its deployment to verify that everything is functioning correctly before actual deployment.
 
-   ```bash
-   python verify.py simulate
-
-   ```bash
-   python verify.py
+```bash
+python verify.py simulate
+python verify.py
+```
 
 The script will prompt you for several pieces of information:
 
