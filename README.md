@@ -28,7 +28,7 @@ After this, the script will create a reproducible build for the specified image.
 
 5. **"Wallet File Name (PEM or JSON)":**   Enter the name of the wallet file with which you are going to deploy and verify your contract.
 
-A prompt will ask you to deploy the newly created wasm file to the chosen network. The script will suggest an mxpy command to deploy a payable, non-upgradable, readable contract. You are free to copy and paste the suggested command template into another terminal to deploy the contract as you like.
+A prompt will ask you to deploy the newly created wasm file to the chosen network. The script will suggest an mxpy command to deploy a payable, non-upgradable, readable contract. You are free to copy/paste and modify the suggested command template into another terminal to deploy the contract as you like.
 
 One more piece of information will be requested to verify the contract:
 
