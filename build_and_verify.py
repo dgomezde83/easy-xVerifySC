@@ -176,8 +176,5 @@ def main(args=None):
     else:
         print("Skipping mxpy verification command.")
 
-    # Ensure that the function always returns the command strings
-    return ' '.join(build_command), ' '.join(mxpy_command)
-
 if __name__ == "__main__":
     main()
