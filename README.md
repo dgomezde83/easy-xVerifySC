@@ -20,7 +20,7 @@ The script will prompt you for several pieces of information:
 
 2. **"Build Output Directory":**  Indicate the output directory for storing build information (note: this directory should not exist prior to running the script; it will be created automatically).
 
-3. **"Image Version":**  Enter the latest image version from [DockerHub](https://docs.docker.com/desktop/install/linux-install/).
+3. **"Image Version":**  Enter the latest image version from [DockerHub](https://hub.docker.com/r/multiversx/sdk-rust-contract-builder/tags).
 
 After this, the script will create a reproducible build for the specified image. Then, two additional pieces of information will be requested:
 
@@ -33,6 +33,8 @@ A prompt will ask you to deploy the newly created wasm file to the chosen networ
 One more piece of information will be requested to verify the contract:
 
 6. **"Smart Contract Address":**  Provide the address of the deployed smart contract.
+
+A prompt will ask you to confirm that you want to launch the verification process with the suggested mxpy command. Enter 'yes' or 'y' to confirm.
 
 Now, the verification process will start. It may take a few minutes to complete, and another few minutes to appear on the chain. Be patient!
 
