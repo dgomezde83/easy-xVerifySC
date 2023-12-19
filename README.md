@@ -5,7 +5,7 @@
 **easy-xVerifySC** is a Python-based tool designed to streamline the process of compiling a smart contract from its source code in a reproducible manner, deploying it onto the blockchain, and executing the verification process within the MultiversX explorer. This script simplifies each step, ensuring a seamless and efficient workflow.
 
 ## Why use it?
-Ensuring the integrity of smart contracts on the blockchain is best achieved by compiling the contract in a reproducible manner and then uploading it. This process validates that the code executed on the blockchain corresponds precisely to the source code being verified. Using this script makes the process much simpler if you intend to deploy your contract from a local PEM or JSON file.
+Ensuring the integrity of smart contracts on the blockchain is best achieved by compiling the contract in a reproducible manner and then uploading it. This process validates that the code executed on the blockchain corresponds precisely to the source code being verified. Using this script makes the process much simpler if you intend to deploy your contract from a local PEM or JSON file. If you want more information, check the [documentation](https://docs.multiversx.com/developers/reproducible-contract-builds) and [this](https://www.youtube.com/watch?v=yW1TyslJ-28) video.
 
 ## How to Use?
 
